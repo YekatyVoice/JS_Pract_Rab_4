@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div id="test"></div>
+<script>
+    var a = prompt('Введите значение переменной a: ', ' '); 
+    var b = prompt('Введите значение переменной b: ', ' ');
+    
+    var res = ((a == null || b == null) || (a == ' ' || b == ' ')) ? 'Введите значения!' :
+    (a == b) ? 'Значения равны' :
+    'Значения не равны'; 
+    alert (res);
+</script>
+</body>
+</html>
