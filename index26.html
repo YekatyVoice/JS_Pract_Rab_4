@@ -3,16 +3,14 @@
 <body>
 <div id="test"></div>
 <script>
-    var a = prompt('Введите значение переменной a: ', ' '); 
+   do {
+	var a = prompt('Введите значение переменной a: ', ' '); 
     var b = prompt('Введите значение переменной b: ', ' ');
     var c = prompt('Введите значение переменной c: ', ' ');
-    var res1 =  (a * a + b * b);
-    var res2 =  (c * c);
-    var res = ((!Number(res1)) || (!Number(res2))) ? 'Значения a, b, c должны быть числовыми!' :
-	((a < 0) || (b <0)) ? 'Значения a, b, не могут быть отрицательными!' :
-    (res1 == res2) ? 'Ура: угадали длины сторон треугольника' :
-    'Надо учить теорему'; 
-    alert (res);
+	} while (a <= 0 || b <= 0 && c <= 0 || Number.isNaN(a) == true || Number.isNaN(b) == true)
+	var res = (a * a + b * b == c * c) ? 'Ура: угадали длины сторон треугольника': 'Надо учить теорему';
+	alert (res);
+
 </script>
 </body>
 </html>
